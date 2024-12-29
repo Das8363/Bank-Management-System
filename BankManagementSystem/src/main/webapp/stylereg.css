@@ -1,0 +1,126 @@
+@charset "ISO-8859-1";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.input-field input,
+.input-field select {
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    background: linear-gradient(90deg, #0ed81b, #f1a708);
+    border: none;
+    color: white;
+    margin-top: 5px;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nextBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.nextBtn .btnText {
+    font-size: 1rem;
+}
+
+.nav {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav img {
+    border-radius: 8px;
+}
+
+.nav button {
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .fields {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+}
